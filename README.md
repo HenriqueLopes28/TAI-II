@@ -1,1 +1,0 @@
-![Silvia Gomes](imagens/Silvia.png)
