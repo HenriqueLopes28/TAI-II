@@ -1,0 +1,27 @@
+{% extends "usuarios/base.html" %}
+{% block head %}
+    {% load static %}
+    <script src="{% static 'perguntas.js' %}"></script>
+{% endblock head %}
+
+{% block base %}
+
+    <div class="card p-4 shadow-lg text-center" style="max-width: 500px; width: 100%;">
+        
+        <h3 id="pergunta"  style="user-select: none;"></h3>
+        <div id="opcoes" class="my-3"  style="user-select: none;"></div>
+        
+        <input type="hidden" id="csrf_token" value="{{ csrf_token }}">
+        
+        <div class="d-flex justify-content-between">
+            <button id="anterior" class="btn btn-outline-primary rounded-circle p-3" style="width: 13%; user-select: none;">
+                &#8592;
+            </button>
+            <button id="proximo" class="btn btn-outline-primary rounded-circle p-3" style="width: 13%; user-select: none;">
+                &#8594;
+            </button>
+        </div>
+       
+    </div>
+
+{% endblock base %}
