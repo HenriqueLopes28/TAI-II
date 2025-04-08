@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.cache import never_cache
 from django.contrib.auth import authenticate, login
 from django.http import JsonResponse
 from functools import wraps
@@ -24,10 +25,13 @@ def tipo_importancia(tipo_permitido):
 def home(request):
     return render(request, 'usuarios/home.html')
 
+@never_cache
 def cadastro(request):
 
-    if request.method != "POST":
-        return render(request, 'usuarios/cadastro.html')
+    mensagem_erro = request.session.pop("mensagem_erro", None)
+
+    if request.method == "GET":
+        return render(request, 'usuarios/cadastro.html', {"mensagem_erro": mensagem_erro})
     
     if request.method == "POST":
         numero = request.POST.get("numero_cadastro")
@@ -36,7 +40,7 @@ def cadastro(request):
             usuario = Usuario.objects.get(numero_cadastro=numero)  # Busca no banco de dados
             
             login(request, usuario)
-            
+            request.session["mensagem_sucesso"] = "Login realizado com sucesso!"
             # Redirecionamento com base na importância
             if usuario.importancia == 1:
                 return redirect("pesquisa")  # Nome da URL correspondente
@@ -48,23 +52,27 @@ def cadastro(request):
                 return redirect("resultados")
             
         except Usuario.DoesNotExist:
-            return render(request, "usuarios/cadastro.html", {"mensagem": "Usuário não encontrado!"})
+            request.session["mensagem_erro"] = "Usuário não encontrado!"
+            return redirect("cadastro")
 
 
 @login_required
 @tipo_importancia(1)
 def pesquisa(request):
-    return render(request, 'usuarios/pesquisa.html')
+    mensagem_sucesso = request.session.pop("mensagem_sucesso", None)
+    return render(request, 'usuarios/pesquisa.html', {"mensagem_sucesso": mensagem_sucesso})
 
 @login_required
 @tipo_importancia(2)
 def pesquisa_professores(request):
-    return render(request, 'usuarios/pesquisa_professores.html')
+    mensagem_sucesso = request.session.pop("mensagem_sucesso", None)
+    return render(request, 'usuarios/pesquisa_professores.html', {"mensagem_sucesso": mensagem_sucesso})
 
 @login_required
 @tipo_importancia(3)
 def resultados(request):
-    return render(request, 'usuarios/resultados.html')
+    mensagem_sucesso = request.session.pop("mensagem_sucesso", None)
+    return render(request, 'usuarios/resultados.html', {"mensagem_sucesso": mensagem_sucesso})
 
 @login_required
 @tipo_importancia(1)

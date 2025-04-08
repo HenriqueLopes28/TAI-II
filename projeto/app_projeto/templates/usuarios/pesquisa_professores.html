@@ -1,4 +1,32 @@
 {% extends "usuarios/base.html" %}
+{% block head %}
+    <style>
+        .fade-out {
+        opacity: 0;
+        transition: opacity 1.0s ease-in-out;
+        }
+    
+        .fade-in {
+        opacity: 1;
+        transition: opacity 1.0s ease-in-out;
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            var toast = document.getElementById("mensagem-toast");
+            if (toast) {
+                toast.classList.remove("fade-in");
+                toast.classList.add("fade-out");
+    
+                // Aguarda a animação terminar antes de remover
+                setTimeout(function () {
+                    toast.remove();
+                }, 3000); // igual ao tempo do transition (3s)
+            }
+        }, 3000); // aparece por 3 segundos antes de começar o fade-out
+    </script>
+
+{% endblock head %}
 {% block base %}
 
     <h1 class="text-primary text-center mb-4" style="user-select: none;">Pesquisa Professores</h1>
