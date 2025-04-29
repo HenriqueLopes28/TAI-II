@@ -1,0 +1,374 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SOL_TAI
+</name>
+</assembly>
+<members>
+<member name="T:SOL_TAI.My.MyWebExtension">
+ <summary>
+ Módulo usado para definir as propriedades que estão disponíveis em My Namespace para projetos da web.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:SOL_TAI.My.MyWebExtension.Computer">
+ <summary>
+ Retorna informações sobre o computador host.
+ </summary>
+</member>
+<member name="P:SOL_TAI.My.MyWebExtension.User">
+ <summary>
+ Retorna informações sobre o usuário atual da web.
+ </summary>
+</member>
+<member name="P:SOL_TAI.My.MyWebExtension.Request">
+ <summary>
+ Retorna um objeto Request.
+ </summary>
+</member>
+<member name="P:SOL_TAI.My.MyWebExtension.Response">
+ <summary>
+ Retorna um objeto Response.
+ </summary>
+</member>
+<member name="P:SOL_TAI.My.MyWebExtension.Log">
+ <summary>
+ Retorna o objeto de log Asp.
+ </summary>
+</member>
+<member name="F:SOL_TAI.index._form1">
+<summary>
+Controle form1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.index._ScriptManager1">
+<summary>
+Controle ScriptManager1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.index._UpPagina">
+<summary>
+Controle UpPagina.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.index._TxtUser">
+<summary>
+Controle TxtUser.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.index._BtnLogin">
+<summary>
+Controle BtnLogin.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.index._PnlEscola">
+<summary>
+Controle PnlEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._form1">
+<summary>
+Controle form1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._ScriptManager1">
+<summary>
+Controle ScriptManager1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._BtnInicio">
+<summary>
+Controle BtnInicio.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._BtnQuemSomos">
+<summary>
+Controle BtnQuemSomos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._BtnLogin">
+<summary>
+Controle BtnLogin.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._DivTexto">
+<summary>
+Controle DivTexto.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._PnlLogin">
+<summary>
+Controle PnlLogin.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._TextCodigo">
+<summary>
+Controle TextCodigo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._BtnLogar">
+<summary>
+Controle BtnLogar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.inicio._PnlQuemSomos">
+<summary>
+Controle PnlQuemSomos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._form1">
+<summary>
+Controle form1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._ScriptManager1">
+<summary>
+Controle ScriptManager1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._BtnEscola">
+<summary>
+Controle BtnEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._BtnProfessor">
+<summary>
+Controle BtnProfessor.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._BtnSair">
+<summary>
+Controle BtnSair.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._PnlAlunoProfessor">
+<summary>
+Controle PnlAlunoProfessor.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._PnlPerguntasProfessor">
+<summary>
+Controle PnlPerguntasProfessor.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._UpPergProfessor">
+<summary>
+Controle UpPergProfessor.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._DpProfessorSelecionado">
+<summary>
+Controle DpProfessorSelecionado.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._GridPerguntaProfessor">
+<summary>
+Controle GridPerguntaProfessor.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._PnlPerguntasEscola">
+<summary>
+Controle PnlPerguntasEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._PnlDiretor">
+<summary>
+Controle PnlDiretor.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._PnlRespostasProfessor">
+<summary>
+Controle PnlRespostasProfessor.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._PnlRespostasEscola">
+<summary>
+Controle PnlRespostasEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.SiteMaster._MainContent">
+<summary>
+Controle MainContent.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.Site_Mobile._Head1">
+<summary>
+controle Head1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.Site_Mobile._HeadContent">
+<summary>
+Controle HeadContent.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.Site_Mobile._form1">
+<summary>
+Controle form1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.Site_Mobile._FeaturedContent">
+<summary>
+Controle FeaturedContent.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.Site_Mobile._MainContent">
+<summary>
+Controle MainContent.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.Site_Mobile._ViewSwitcher1">
+<summary>
+controle ViewSwitcher1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+</members>
+</doc>

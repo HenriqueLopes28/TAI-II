@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|solutionrelative:inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|d:\\projetos\\proj_trabtai\\implementacao\\sol_tai\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|solutionrelative:principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\inicio.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|solutionrelative:inicio.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\principal.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|solutionrelative:principal.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1C10BDF-8D07-4FD2-8819-106BE6AB3DED}|..\\DAL\\DAL.vbproj|d:\\projetos\\proj_trabtai\\implementacao\\dal\\daltai.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E3639A6-D787-4E50-947A-9E16DDFD94EF}|..\\BLL\\BLL.vbproj|d:\\projetos\\proj_trabtai\\implementacao\\bll\\blltai.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{069F8408-7FDD-4D58-9DD8-AF745FF2E693}|..\\oBanco\\oBanco.vbproj|d:\\projetos\\proj_trabtai\\implementacao\\obanco\\cbanco.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "inicio.aspx",
+              "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\inicio.aspx",
+              "RelativeDocumentMoniker": "inicio.aspx",
+              "ToolTip": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\inicio.aspx",
+              "RelativeToolTip": "inicio.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-21T17:03:24.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "inicio.aspx.vb",
+              "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\inicio.aspx.vb",
+              "RelativeDocumentMoniker": "inicio.aspx.vb",
+              "ToolTip": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\inicio.aspx.vb",
+              "RelativeToolTip": "inicio.aspx.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-21T20:43:42.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "principal.aspx",
+              "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\principal.aspx",
+              "RelativeDocumentMoniker": "principal.aspx",
+              "ToolTip": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\principal.aspx",
+              "RelativeToolTip": "principal.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-25T22:17:09.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "principal.aspx.vb",
+              "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\principal.aspx.vb",
+              "RelativeDocumentMoniker": "principal.aspx.vb",
+              "ToolTip": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\principal.aspx.vb",
+              "RelativeToolTip": "principal.aspx.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-25T22:18:02.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BLLTAI.vb",
+              "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\BLL\\BLLTAI.vb",
+              "RelativeDocumentMoniker": "..\\BLL\\BLLTAI.vb",
+              "ToolTip": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\BLL\\BLLTAI.vb",
+              "RelativeToolTip": "..\\BLL\\BLLTAI.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-22T15:49:08.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DALTAI.vb",
+              "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\DAL\\DALTAI.vb",
+              "RelativeDocumentMoniker": "..\\DAL\\DALTAI.vb",
+              "ToolTip": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\DAL\\DALTAI.vb",
+              "RelativeToolTip": "..\\DAL\\DALTAI.vb",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAwwEYAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-24T00:00:24.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CBanco.vb",
+              "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\oBanco\\CBanco.vb",
+              "RelativeDocumentMoniker": "..\\oBanco\\CBanco.vb",
+              "ToolTip": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\oBanco\\CBanco.vb",
+              "RelativeToolTip": "..\\oBanco\\CBanco.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-29T16:58:55.077Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

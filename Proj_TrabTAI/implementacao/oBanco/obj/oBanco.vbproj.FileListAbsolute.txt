@@ -1,0 +1,111 @@
+C:\@WORK\consel\sol_consel\DAL\oBanco\bin\Debug\oBanco.dll
+C:\@WORK\consel\sol_consel\DAL\oBanco\bin\Debug\oBanco.pdb
+C:\@WORK\consel\sol_consel\DAL\oBanco\bin\Debug\oBanco.xml
+C:\@WORK\consel\sol_consel\DAL\oBanco\obj\Debug\ResolveAssemblyReference.cache
+C:\@WORK\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.Resources.resources
+C:\@WORK\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.vbproj.GenerateResource.Cache
+C:\@WORK\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.dll
+C:\@WORK\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.xml
+C:\@WORK\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.pdb
+D:\@Work\consel\sol_consel\DAL\oBanco\bin\Debug\oBanco.dll
+D:\@Work\consel\sol_consel\DAL\oBanco\bin\Debug\oBanco.pdb
+D:\@Work\consel\sol_consel\DAL\oBanco\bin\Debug\oBanco.xml
+D:\@Work\consel\sol_consel\DAL\oBanco\obj\Debug\ResolveAssemblyReference.cache
+D:\@Work\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.Resources.resources
+D:\@Work\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.vbproj.GenerateResource.Cache
+D:\@Work\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.dll
+D:\@Work\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.xml
+D:\@Work\consel\sol_consel\DAL\oBanco\obj\Debug\oBanco.pdb
+D:\concel\sol_consel\DAL\oBanco\bin\Debug\oBanco.dll
+D:\concel\sol_consel\DAL\oBanco\bin\Debug\oBanco.pdb
+D:\concel\sol_consel\DAL\oBanco\bin\Debug\oBanco.xml
+D:\concel\sol_consel\DAL\oBanco\obj\Debug\ResolveAssemblyReference.cache
+D:\concel\sol_consel\DAL\oBanco\obj\Debug\oBanco.Resources.resources
+D:\concel\sol_consel\DAL\oBanco\obj\Debug\oBanco.vbproj.GenerateResource.Cache
+D:\concel\sol_consel\DAL\oBanco\obj\Debug\oBanco.dll
+D:\concel\sol_consel\DAL\oBanco\obj\Debug\oBanco.xml
+D:\concel\sol_consel\DAL\oBanco\obj\Debug\oBanco.pdb
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Debug\oBanco.dll
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Debug\oBanco.pdb
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Debug\oBanco.xml
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\ResolveAssemblyReference.cache
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.Resources.resources
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.vbproj.GenerateResource.Cache
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.dll
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.xml
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.pdb
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Release\oBanco.dll
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Release\oBanco.pdb
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Release\oBanco.xml
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\ResolveAssemblyReference.cache
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.Resources.resources
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.vbproj.GenerateResource.Cache
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.dll
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.xml
+E:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.pdb
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Debug\oBanco.dll
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Debug\oBanco.pdb
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Debug\oBanco.xml
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\ResolveAssemblyReference.cache
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.Resources.resources
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.vbproj.GenerateResource.Cache
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.dll
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.xml
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Debug\oBanco.pdb
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Release\oBanco.dll
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Release\oBanco.pdb
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\bin\Release\oBanco.xml
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\ResolveAssemblyReference.cache
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.Resources.resources
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.vbproj.GenerateResource.Cache
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.dll
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.xml
+D:\Inovaz\projeto_eAPR\implementacao\oBanco\obj\Release\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\bin\Debug\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\bin\Debug\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\bin\Debug\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Debug\ResolveAssemblyReference.cache
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Debug\oBanco.Resources.resources
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Debug\oBanco.vbproj.GenerateResource.Cache
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Debug\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Debug\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Debug\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\bin\Release\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\bin\Release\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\bin\Release\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Release\ResolveAssemblyReference.cache
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Release\oBanco.Resources.resources
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Release\oBanco.vbproj.GenerateResource.Cache
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Release\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Release\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line\implementacao\oBanco\obj\Release\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\bin\Debug\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\bin\Debug\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\bin\Debug\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\obj\Debug\ResolveAssemblyReference.cache
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\obj\Debug\oBanco.Resources.resources
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\obj\Debug\oBanco.vbproj.GenerateResource.Cache
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\obj\Debug\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\obj\Debug\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\obj\Debug\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\bin\Debug\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\bin\Debug\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\bin\Debug\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\bin\Debug\mysql.data.dll
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Debug\ResolveAssemblyReference.cache
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Debug\oBanco.Resources.resources
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Debug\oBanco.vbproj.GenerateResource.Cache
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Debug\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Debug\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Debug\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\bin\Release\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\bin\Release\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\bin\Release\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\bin\Release\mysql.data.dll
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Release\ResolveAssemblyReference.cache
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Release\oBanco.Resources.resources
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Release\oBanco.vbproj.GenerateResource.Cache
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Release\oBanco.dll
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Release\oBanco.xml
+D:\Inovaz\projeto_eAPR - On-line Modulos - Cópia\implementacao\oBanco\obj\Release\oBanco.pdb
+D:\Inovaz\projeto_eAPR - On-line Modulos\implementacao\oBanco\bin\Debug\mysql.data.dll
