@@ -5,11 +5,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <link href="content/bootstrap.min.css" rel="stylesheet" />
     <link href="content/Site.css" rel="stylesheet" />
+
+    <link href="../web/Pnotify/animate.css" rel="stylesheet" />
+    <link href="../web/Pnotify/pnotify.custom.min.css" rel="stylesheet" />
+
     <link rel="icon" type="image/png" href="img/logoteste.png" />
     <title>InsightFlow</title>
+
 </head>
+
 <body class="text-black" style="background-color: #cacaca; padding-top: 100px;">
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -35,67 +42,132 @@
             <!-- Panel Aluno / Professor -->
 
             <asp:Panel ID="PnlPerguntasProfessor" runat="server" Visible="False">
-
-                <div class="row pt-5">
-                    <div class="col md-6 mb-4">
-                    </div>
-                    <div class="col-lg-10">
-                        <div class="card p-4 shadow-sm">
-                            <h5 class="card-title fs-2 fw-bold">O que é o InsightFlow?</h5>
-                            <h6 class="pt-2">Avaliação anônima para transformar a realidade escolar</h6>
-                            <hr />
-                            <asp:UpdatePanel ID="UpPergProfessor" runat="server">
-                                <ContentTemplate>
-                                    <p class="card-text pt-3">
-                                        <asp:DropDownList ID="DpProfessorSelecionado" CssClass="form-select" runat="server" AutoPostBack="true"></asp:DropDownList>
-
-                                        <!-- Perguntas Professor -->
-                                        <asp:GridView ID="GridPerguntaProfessor" HorizontalAlign="Center" CssClass="table table-hover f-12" GridLines="None" AutoGenerateColumns="False"
-                                            DataKeyNames="id_pergunta" runat="server">
-
-                                            <Columns>
-
-                                                <asp:BoundField DataField="pergunta" ItemStyle-HorizontalAlign="left" />
-
-                                                <asp:TemplateField HeaderText="Muito Bom" ItemStyle-HorizontalAlign="Center">
-                                                    <ItemTemplate>
-                                                        <asp:RadioButton ID="rbAvaliacaoAspectoGeral1" runat="server" GroupName="rbAspectoGeral" />
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Bom" ItemStyle-HorizontalAlign="Center">
-                                                    <ItemTemplate>
-                                                        <asp:RadioButton ID="rbAvaliacaoAspectoGeral2" runat="server" GroupName="rbAspectoGeral" />
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Regular" ItemStyle-HorizontalAlign="Center">
-                                                    <ItemTemplate>
-                                                        <asp:RadioButton ID="rbAvaliacaoAspectoGeral3" runat="server" GroupName="rbAspectoGeral" />
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Ruim" ItemStyle-HorizontalAlign="Center">
-                                                    <ItemTemplate>
-                                                        <asp:RadioButton ID="rbAvaliacaoAspectoGeral4" runat="server" GroupName="rbAspectoGeral" />
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Muito Ruim" ItemStyle-HorizontalAlign="Center">
-                                                    <ItemTemplate>
-                                                        <asp:RadioButton ID="rbAvaliacaoAspectoGeral5" runat="server" GroupName="rbAspectoGeral" />
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                            </Columns>
-                                        </asp:GridView>
-                                    </p>
-                                </ContentTemplate>
-                            </asp:UpdatePanel>
+                <div class="container-fluid overflow-hidden">
+                    <div class="row pt-5">
+                        <div class="col md-6 mb-4">
                         </div>
+                        <div class="col-lg-10">
+                            <div class="card p-4 shadow-sm">
+                                <h5 class="card-title fs-2 fw-bold">Avaliação sobre os professores</h5>
+                                <hr />
+                                <asp:UpdatePanel ID="UpPergProfessor" runat="server">
+                                    <ContentTemplate>
+                                        <p class="card-text pt-3">
+                                            <asp:DropDownList ID="DpProfessorSelecionado" CssClass="form-select" runat="server" AutoPostBack="true"></asp:DropDownList>
+
+                                            <!-- Perguntas Professor -->
+                                            <asp:GridView ID="GridPerguntaProfessor" HorizontalAlign="Center" CssClass="table table-hover f-12" GridLines="None" AutoGenerateColumns="False"
+                                                DataKeyNames="id_pergunta" runat="server">
+                                                <Columns>
+
+                                                    <asp:BoundField DataField="pergunta" ItemStyle-HorizontalAlign="left" />
+                                                    <asp:TemplateField HeaderText="Muito Bom" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao1" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Bom" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao2" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Regular" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao3" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Ruim" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao4" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Muito Ruim" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao5" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                </Columns>
+                                            </asp:GridView>
+                                            <div class="d-flex justify-content-end mt-3">
+                                                <asp:Button ID="BtnSalvarRespostasProfessor" Text="Salvar" CssClass="btn btn-success fw-bold me-3 px-3 py-2" Visible="false" runat="server" />
+                                            </div>
+                                        </p>
+                                    </ContentTemplate>
+                                    <Triggers>
+                                        <asp:PostBackTrigger ControlID="BtnSalvarRespostasProfessor" />
+                                    </Triggers>
+                                </asp:UpdatePanel>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
                     </div>
-                    <div class="col-lg-1"></div>
                 </div>
             </asp:Panel>
 
             <asp:Panel ID="PnlPerguntasEscola" runat="server" Visible="False">
                 <!-- Perguntas Escola -->
-                <p>teste perguntas escola</p>
+                <div class="container-fluid overflow-hidden">
+                    <div class="row pt-5">
+                        <div class="col md-6 mb-4">
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="card p-4 shadow-sm">
+                                <h5 class="card-title fs-2 fw-bold">Avaliação sobre a infraestrutura da escola</h5>   
+                                <hr />
+                                <asp:UpdatePanel ID="UpPergEscola" runat="server">
+                                    <ContentTemplate>
+                                        <p class="card-text pt-3">
+                                            
+
+                                            <!-- Perguntas escola -->
+                                            <asp:GridView ID="GridPerguntasEscola" HorizontalAlign="Center" CssClass="table table-hover f-12" GridLines="None" AutoGenerateColumns="False"
+                                                DataKeyNames="id_pergunta" runat="server">
+                                                <Columns>
+
+                                                    <asp:BoundField DataField="pergunta" ItemStyle-HorizontalAlign="left" />
+                                                    <asp:TemplateField HeaderText="Muito Bom" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao1" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Bom" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao2" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Regular" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao3" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Ruim" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao4" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Muito Ruim" ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <asp:RadioButton ID="rbAvaliacao5" runat="server" GroupName="rbAspectoGeral" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                </Columns>
+                                            </asp:GridView>
+                                            <div class="d-flex justify-content-end mt-3">
+                                                <asp:Button ID="BtnSalvarRespostasEscola" Text="Salvar" CssClass="btn btn-success fw-bold me-3 px-3 py-2" Visible="false" runat="server" />
+                                            </div>
+                                        </p>
+                                    </ContentTemplate>
+                                    <Triggers>
+                                        <asp:PostBackTrigger ControlID="BtnSalvarRespostasEscola" />
+                                    </Triggers>
+                                </asp:UpdatePanel>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
             </asp:Panel>
 
         </asp:Panel>
@@ -106,21 +178,30 @@
             <!-- Panel Diretor -->
             <asp:Panel ID="PnlRespostasProfessor" runat="server" Visible="False">
                 <!-- Respostas Professor -->
-                <p>teste diretor respostas professor</p>
+                
 
             </asp:Panel>
 
             <asp:Panel ID="PnlRespostasEscola" runat="server" Visible="False">
                 <!-- Respostas Escola -->
-                <p>teste diretor respostas escola</p>
+                
             </asp:Panel>
 
         </asp:Panel>
 
+
         <script src="scripts/bootstrap.js"></script>
-        <script src="scripts/bootstrap.min.js"></script>
         <script src="scripts/jquery-3.7.0.min.js"></script>
-        <script src="scripts/jquery-3.7.0.slim.js"></script>
+
+        <script src="../web/Pnotify/pnotify.custom.min.js"></script>
+
+        <script src="../web/Notify/pnotify.buttons.js"></script>
+        <script src="../web/Notify/pnotify.core.js"></script>
+        <script src="../web/Notify/pnotify.nonblock.js"></script>
+
+        <script src="../web/JsLocal.js"></script>
+
+        <script src="https://kit.fontawesome.com/3ebeb577ef.js" crossorigin="anonymous"></script>
     </form>
 </body>
 </html>

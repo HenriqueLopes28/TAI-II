@@ -104,6 +104,15 @@ Partial Public Class principal
     Protected WithEvents GridPerguntaProfessor As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
+    '''Controle BtnSalvarRespostasProfessor.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents BtnSalvarRespostasProfessor As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Controle PnlPerguntasEscola.
     '''</summary>
     '''<remarks>
@@ -111,6 +120,33 @@ Partial Public Class principal
     '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
     '''</remarks>
     Protected WithEvents PnlPerguntasEscola As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''Controle UpPergEscola.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents UpPergEscola As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
+    '''Controle GridPerguntasEscola.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents GridPerguntasEscola As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''Controle BtnSalvarRespostasEscola.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents BtnSalvarRespostasEscola As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Controle PnlDiretor.

@@ -145,6 +145,15 @@ Campo gerado automaticamente.
 Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
 </remarks>
 </member>
+<member name="F:SOL_TAI.inicio._UpdatePanel1">
+<summary>
+Controle UpdatePanel1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
 <member name="F:SOL_TAI.inicio._PnlLogin">
 <summary>
 Controle PnlLogin.
@@ -271,9 +280,45 @@ Campo gerado automaticamente.
 Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
 </remarks>
 </member>
+<member name="F:SOL_TAI.principal._BtnSalvarRespostasProfessor">
+<summary>
+Controle BtnSalvarRespostasProfessor.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
 <member name="F:SOL_TAI.principal._PnlPerguntasEscola">
 <summary>
 Controle PnlPerguntasEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._UpPergEscola">
+<summary>
+Controle UpPergEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._GridPerguntasEscola">
+<summary>
+Controle GridPerguntasEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._BtnSalvarRespostasEscola">
+<summary>
+Controle BtnSalvarRespostasEscola.
 </summary>
 <remarks>
 Campo gerado automaticamente.

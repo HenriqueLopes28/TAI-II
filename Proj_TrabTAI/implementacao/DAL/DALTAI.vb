@@ -76,11 +76,27 @@ Public Class DALTAI
 
             Return dt
 
-
-
         Catch ex As Exception
             Throw ex
         End Try
+    End Function
+
+    Public Function VerificaAvalicao(login As String, id_professor As Integer) As Boolean
+        Dim s As New Text.StringBuilder
+        Dim oBanco As New oBanco.CBanco
+        Dim dt As New DataTable
+
+        s.AppendLine("SELECT DISTINCT id_professor from db_trabalho.tbl_resposta where id_pessoa = @id_pessoa AND id_professor = @id_professor")
+        oBanco.pCommand.Parameters.AddWithValue("@id_pessoa", login)
+        oBanco.pCommand.Parameters.AddWithValue("@id_professor", id_professor)
+        dt = oBanco.mDataTableCriar(s.ToString)
+
+        If CInt(dt.Rows(0)("id_professor")) = id_professor Then
+            Return True
+        Else
+            Return False
+        End If
+
     End Function
 #End Region
 
@@ -108,6 +124,24 @@ Public Class DALTAI
         End Try
     End Function
 #End Region
+    Public Function SalvaRespostas(dt As DataTable) As Boolean
+        Try
+            Dim s As New Text.StringBuilder
+            Dim oBanco As New oBanco.CBanco
+
+            For i As Integer = 0 To dt.Rows.Count - 1
+                s.AppendLine("INSERT INTO tbl_resposta (id_pergunta, id_pessoa, resposta, id_professor) VALUES (" + dt.Rows(i)("id_pergunta").ToString + ",")
+                s.AppendLine(dt.Rows(i)("id_pessoa").ToString + ", " + dt.Rows(i)("resposta").ToString + ", " + dt.Rows(i)("id_professor").ToString + ");")
+            Next
+
+            oBanco.mIncluir(s.ToString)
+
+            Return True
+
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 
 #Region "DELETE"
 

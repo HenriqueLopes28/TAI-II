@@ -5,8 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <link href="content/bootstrap.min.css" rel="stylesheet" />
     <link href="content/Site.css" rel="stylesheet" />
+
+    <link href="../web/Pnotify/animate.css" rel="stylesheet" />
+    <link href="../web/Pnotify/pnotify.custom.min.css" rel="stylesheet" />
+
     <link rel="icon" type="image/png" href="img/logoteste.png" />
     <title>InsightFlow</title>
 </head>
@@ -61,7 +66,7 @@
                         </p>
                     </div>
                 </div>
-                
+
 
 
                 <div class="col md-6 mb-4">
@@ -94,22 +99,27 @@
 
 
         <!-- Tela de Login -->
-        <asp:Panel ID="PnlLogin" runat="server" Visible="false">
-            <div class="min-vh-80 d-flex justify-content-center">
-                <div class="d-flex align-items-center" style="height: 80vh;">
-                    <div class="bg-white p-5 rounded shadow" style="width: 400px;">
-                        <h4 class="text-center">Faça o Login</h4>
-                        <div class="mt-5 text-center">
-                            <asp:TextBox ID="TextCodigo" runat="server" CssClass="form-control mb-3 mx-auto" placeholder="Digite seu código" Style="max-width: 300px;" />
-                        </div>
-                        <div class="text-center">
-                            <asp:Button ID="BtnLogar" runat="server" CssClass="btn btn-outline-dark rounded mx-auto" Text="Logar" Style="width: 150px;" />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:Panel ID="PnlLogin" runat="server" Visible="false">
+                    <div class="min-vh-80 d-flex justify-content-center">
+                        <div class="d-flex align-items-center" style="height: 80vh;">
+                            <div class="bg-white p-5 rounded shadow" style="width: 400px;">
+                                <h4 class="text-center">Faça o Login</h4>
+                                <div class="mt-5 text-center">
+                                    <asp:TextBox ID="TextCodigo" runat="server" CssClass="form-control mb-3 mx-auto" placeholder="Digite seu código" Style="max-width: 300px;" />
+                                </div>
+                                <div class="text-center">
+                                    <asp:Button ID="BtnLogar" runat="server" CssClass="btn btn-outline-dark rounded mx-auto" Text="Logar" Style="width: 150px;" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
 
-        </asp:Panel>
+
 
 
         <!-- Tela de Quem Somos -->
@@ -176,9 +186,17 @@
         </asp:Panel>
 
         <script src="scripts/bootstrap.js"></script>
-        <script src="scripts/bootstrap.min.js"></script>
         <script src="scripts/jquery-3.7.0.min.js"></script>
-        <script src="scripts/jquery-3.7.0.slim.js"></script>
+
+        <script src="../web/Pnotify/pnotify.custom.min.js"></script>
+
+        <script src="../web/Notify/pnotify.buttons.js"></script>
+        <script src="../web/Notify/pnotify.core.js"></script>
+        <script src="../web/Notify/pnotify.nonblock.js"></script>
+
+        <script src="../web/JsLocal.js"></script>
+
+        <script src="https://kit.fontawesome.com/3ebeb577ef.js" crossorigin="anonymous"></script>
     </form>
 </body>
 </html>
