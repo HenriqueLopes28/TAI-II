@@ -98,6 +98,56 @@ Public Class DALTAI
         End If
 
     End Function
+
+    Public Function BuscaRespostas(id_professor As Integer) As DataTable
+
+        Dim s As New Text.StringBuilder
+        Dim oBanco As New oBanco.CBanco
+        Dim dt As New DataTable
+
+
+        s.AppendLine("SELECT ROUND((dadosCompleto.total*100 / total.total), 1) AS percentual,dadosCompleto.dcresposta,dadosCompleto.total AS totalNumerico FROM")
+        s.AppendLine("(SELECT COUNT(resposta) AS total, CASE WHEN resposta=1 THEN 'Muito Bom'")
+        s.AppendLine("ELSE CASE WHEN resposta=2 THEN 'Bom'")
+        s.AppendLine("Else case when resposta=3 then 'Regular'")
+        s.AppendLine("Else case when resposta=4 then 'Ruim'")
+        s.AppendLine("Else 'Muito Ruim'")
+        s.AppendLine("End end end end dcresposta")
+        s.AppendLine("FROM tbl_resposta WHERE id_professor = @id_professor")
+        s.AppendLine("Group by resposta) dadosCompleto,")
+        s.AppendLine("(SELECT COUNT(*) AS total")
+        s.AppendLine("FROM tbl_resposta WHERE id_professor = @id_professor) total;")
+        oBanco.pCommand.Parameters.AddWithValue("@id_professor", id_professor)
+        dt = oBanco.mDataTableCriar(s.ToString)
+
+        Return dt
+    End Function
+
+    Public Function BuscaPessoa(flag_pessoa As Integer) As DataTable
+
+        Dim s As New Text.StringBuilder
+        Dim oBanco As New oBanco.CBanco
+        Dim dt As New DataTable
+
+        s.AppendLine("SELECT nome, id_pessoa FROM tbl_cadastro WHERE flag_pessoa = @flag_pessoa")
+        oBanco.pCommand.Parameters.AddWithValue("@flag_pessoa", flag_pessoa)
+        dt = oBanco.mDataTableCriar(s.ToString)
+
+        Return dt
+    End Function
+
+    Public Function BuscaEscola(id_escola As Integer) As DataTable
+
+        Dim s As New Text.StringBuilder
+        Dim oBanco As New oBanco.CBanco
+        Dim dt As New DataTable
+
+        s.AppendLine("SELECT nome, id_escola FROM tbl_escola WHERE id_escola = @id_escola")
+        oBanco.pCommand.Parameters.AddWithValue("@id_escola", id_escola)
+        dt = oBanco.mDataTableCriar(s.ToString)
+
+        Return dt
+    End Function
 #End Region
 
 #Region "INSERT"

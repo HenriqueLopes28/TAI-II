@@ -225,3 +225,8 @@ D:\Projetos\Proj_TrabTAI\implementacao\oBanco\obj\Debug\oBanco.vbproj.Up2Date
 D:\Projetos\Proj_TrabTAI\implementacao\oBanco\obj\Debug\oBanco.dll
 D:\Projetos\Proj_TrabTAI\implementacao\oBanco\obj\Debug\oBanco.xml
 D:\Projetos\Proj_TrabTAI\implementacao\oBanco\obj\Debug\oBanco.pdb
+D:\Projetos\Proj_TrabTAI\implementacao\oBanco\bin\Debug\System.Buffers.dll
+D:\Projetos\Proj_TrabTAI\implementacao\oBanco\bin\Debug\System.Memory.dll
+D:\Projetos\Proj_TrabTAI\implementacao\oBanco\bin\Debug\System.Numerics.Vectors.dll
+D:\Projetos\Proj_TrabTAI\implementacao\oBanco\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projetos\Proj_TrabTAI\implementacao\oBanco\bin\Debug\System.Threading.Tasks.Extensions.dll

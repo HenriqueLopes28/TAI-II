@@ -4,6 +4,7 @@ Public Class principal
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
         If Not Page.IsPostBack Then
             If Session("Login") Is Nothing Then
                 Response.Redirect("inicio.aspx", False)
@@ -11,19 +12,25 @@ Public Class principal
                 Dim objBE As New BE.BECadastro
                 objBE = CType(Session("Login"), BE.BECadastro)
 
+
+
+
                 If objBE.Flag_pessoa = 0 Then
                     PnlAlunoProfessor.Visible = True
+                    ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('titulo').innerText = 'InsightFlow - Aluno" & "';", True)
+
 
                 ElseIf objBE.Flag_pessoa = 1 Then
 
                     PnlAlunoProfessor.Visible = True
                     BtnProfessor.Visible = False
-
+                    ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('titulo').innerText = 'InsightFlow - Professor" & "';", True)
 
                 Else
                     BtnEscola.Text = "Respostas sobre Escola"
                     BtnProfessor.Text = "Respostas sobre Professor"
-                    PnlDiretor.Visible = True
+                    ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('titulo').innerText = 'InsightFlow - Coordenador" & "';", True)
+
 
                 End If
 
@@ -39,17 +46,20 @@ Public Class principal
 
     Private Sub BtnProfessor_Click(sender As Object, e As EventArgs) Handles BtnProfessor.Click
 
+        Dim ObjBLL As New BLL.BLLTAI
+
         Dim objBE As New BE.BECadastro
         objBE = CType(Session("Login"), BE.BECadastro)
+
+        DivTexto.Visible = False
 
         If objBE.Flag_pessoa = 0 Then
             PnlPerguntasEscola.Visible = False
             PnlPerguntasProfessor.Visible = True
 
 
-            Dim ObjBLL As New BLL.BLLTAI
-            Dim dt As DataTable = ObjBLL.VerificaProfessor(objBE.Id_pessoa)
 
+            Dim dt As DataTable = ObjBLL.VerificaProfessor(objBE.Id_pessoa)
 
             DpProfessorSelecionado.DataValueField = dt.Columns(0).ColumnName
             DpProfessorSelecionado.DataTextField = dt.Columns(1).ColumnName
@@ -70,6 +80,12 @@ Public Class principal
         ElseIf objBE.Flag_pessoa = 1 Then
 
         Else
+
+            Dim dt2 As DataTable = ObjBLL.BuscaPessoa(1)
+            GridNomesProfessor.DataSource = dt2
+            GridNomesProfessor.DataBind()
+            GridNomesProfessor.Visible = True
+
             PnlRespostasEscola.Visible = False
             PnlRespostasProfessor.Visible = True
 
@@ -82,7 +98,7 @@ Public Class principal
         Dim ObjBLL As New BLL.BLLTAI
 
         objBE = CType(Session("Login"), BE.BECadastro)
-
+        DivTexto.Visible = False
 
         If objBE.Flag_pessoa = 0 Or objBE.Flag_pessoa = 1 Then
             Dim EscolaAvaliada As Boolean = ObjBLL.VerificaAvaliacao(objBE.Id_pessoa, 0)
@@ -109,7 +125,15 @@ Public Class principal
                 'erro, escola ja avaliada
             End If
 
+
         Else
+
+            Dim dt2 As DataTable = ObjBLL.BuscaEscola(1)
+            GridNomeEscola.DataSource = dt2
+            GridNomeEscola.DataBind()
+            GridNomeEscola.Visible = True
+
+
             PnlRespostasProfessor.Visible = False
             PnlRespostasEscola.Visible = True
         End If
@@ -314,4 +338,124 @@ Public Class principal
         End If
 
     End Sub
+
+    Private Sub GridNomesProfessor_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles GridNomesProfessor.RowCommand
+        Dim index As Integer = e.CommandArgument
+        Dim nomeProfessor As String = GridNomesProfessor.Rows(index).Cells(0).Text
+        Dim id_professor As Integer = GridNomesProfessor.DataKeys(index).Value
+
+        If e.CommandName = "exibir" Then
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('TituloModal').innerText = 'Resultado do Professor: " & nomeProfessor.Replace("'", "\'") & "';", True)
+            GeraGrafico(id_professor, "Nao existe resposta sobre esse professor(a)!")
+        End If
+
+    End Sub
+    Private Sub GridNomeEscola_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles GridNomeEscola.RowCommand
+
+        Dim index As Integer = e.CommandArgument
+        Dim nomeEscola As String = GridNomeEscola.Rows(index).Cells(0).Text
+        Dim id_escola As Integer = GridNomeEscola.DataKeys(index).Value
+
+        If e.CommandName = "exibir" Then
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('TituloModal').innerText = 'Resultado da Escola: " & nomeEscola.Replace("'", "\'") & "';", True)
+            GeraGrafico(0, "Nao existe resposta sobre a escola!")
+        End If
+
+
+
+
+    End Sub
+
+
+
+    Private Sub GeraGrafico(id_professor As Integer, frase As String)
+
+        Dim objBLL As New BLL.BLLTAI
+        Dim s As New Text.StringBuilder
+        Dim dt As DataTable
+
+        dt = objBLL.BuscaRespostas(id_professor)
+        GridExibirDados.DataSource = dt
+        GridExibirDados.DataBind()
+
+        If dt.Rows.Count > 0 Then
+
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "abrirModal", "$('#modalResultados').modal('show');", True)
+
+            s.Clear()
+            s.AppendLine("$(function () {")
+            s.AppendLine("var doughnutData = {")
+            s.Append("labels: [")
+
+            For i As Integer = 0 To dt.Rows.Count - 1
+                s.Append("'" & dt.Rows(i)("dcresposta") & "(%)'")
+                If i < dt.Rows.Count - 1 Then
+                    s.Append(",")
+                End If
+            Next
+            s.AppendLine("],")
+
+            s.AppendLine("datasets: [{")
+
+            s.Append("data: [")
+
+            For i As Integer = 0 To dt.Rows.Count - 1
+                s.Append(dt.Rows(i)("percentual").ToString.Replace(",", "."))
+                If i < dt.Rows.Count - 1 Then
+                    s.Append(",")
+                End If
+            Next
+
+            s.AppendLine("],")
+            s.Append("backgroundColor: [")
+
+            For i As Integer = 0 To dt.Rows.Count - 1
+                If dt.Rows(i)("dcresposta") = "Muito Bom" Then
+                    s.Append("'#ED4C67'")
+                ElseIf dt.Rows(i)("dcresposta") = "Bom" Then
+                    s.Append("'#19B5FE'")
+                ElseIf dt.Rows(i)("dcresposta") = "Regular" Then
+                    s.Append("'#9CAAB9'")
+                ElseIf dt.Rows(i)("dcresposta") = "Ruim" Then
+                    s.Append("'#9B59B6'")
+                ElseIf dt.Rows(i)("dcresposta") = "Muito Ruim" Then
+                    s.Append("'#47EBE0'")
+                End If
+
+                If i < dt.Rows.Count - 1 Then
+                    s.Append(",")
+                End If
+
+            Next
+
+            s.AppendLine("]")
+
+            s.AppendLine("}]")
+            s.AppendLine("};")
+
+            s.AppendLine("var doughnutOptions = { responsive: true };")
+            s.AppendLine("var ctx1 = document.getElementById('doughnutChartIndividual').getContext('2d');")
+            s.AppendLine("new Chart(ctx1, {type: 'doughnut', data: doughnutData, options: doughnutOptions});")
+            s.AppendLine("});")
+
+
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "graficoChart", s.ToString(), True)
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "escondeGrafico", "$('#doughnutChartIndividual').show();", True)
+
+        Else
+
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "escondeGrafico", "$('#doughnutChartIndividual').hide();", True)
+
+            Dim titulo As String
+            Dim tempo As Integer
+
+            titulo = "ERRO"
+
+            tempo = 2000
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "congratz", "mensagem('<b>" & titulo & "</b>','error','<b>" & frase & "</b>'," & tempo & ",'350px','fa fa-solid fa-exclamation-circle');", True)
+        End If
+
+    End Sub
+
+
 End Class

@@ -1,4 +1,6 @@
-﻿Public Class BLLTAI
+﻿Imports DAL
+
+Public Class BLLTAI
 
 #Region "SELECTS"
     Public Function valida(login As String) As DataTable
@@ -32,6 +34,34 @@
         Try
             Dim dal As New DAL.DALTAI
             Return dal.VerificaAvalicao(login, id_professor)
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+    Public Function BuscaRespostas(id_professor As Integer) As DataTable
+        Try
+            Dim dal As New DAL.DALTAI
+            Return dal.BuscaRespostas(id_professor)
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+    Public Function BuscaPessoa(flag_pessoa As Integer) As DataTable
+        Try
+            Dim dal As New DAL.DALTAI
+            Return dal.BuscaPessoa(flag_pessoa)
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+    Public Function BuscaEscola(id_escola As Integer) As DataTable
+        Try
+            Dim dal As New DAL.DALTAI
+            Return dal.BuscaEscola(id_escola)
         Catch ex As Exception
 
         End Try

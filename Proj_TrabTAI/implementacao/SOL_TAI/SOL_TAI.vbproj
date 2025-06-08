@@ -176,6 +176,15 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="web\ChartJs\Chart.min.js" />
+    <Content Include="web\ChartJs\chartjs-demo.js" />
+    <Content Include="web\jsLocal.js" />
+    <Content Include="web\notify\pnotify.buttons.js" />
+    <Content Include="web\notify\pnotify.core.js" />
+    <Content Include="web\notify\pnotify.nonblock.js" />
+    <Content Include="web\Pnotify\animate.css" />
+    <Content Include="web\Pnotify\pnotify.custom.min.css" />
+    <Content Include="web\Pnotify\pnotify.custom.min.js" />
     <None Include=".editorconfig" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
