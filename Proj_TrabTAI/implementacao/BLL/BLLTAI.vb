@@ -39,20 +39,20 @@ Public Class BLLTAI
         End Try
     End Function
 
-    Public Function BuscaRespostas(id_professor As Integer) As DataTable
+    Public Function BuscaRespostas(id_professor As Integer, id_escola As Integer) As DataTable
         Try
             Dim dal As New DAL.DALTAI
-            Return dal.BuscaRespostas(id_professor)
+            Return dal.BuscaRespostas(id_professor, id_escola)
 
         Catch ex As Exception
 
         End Try
     End Function
 
-    Public Function BuscaPessoa(flag_pessoa As Integer) As DataTable
+    Public Function BuscaPessoa(id_escola As Integer, flag_pessoa As Integer) As DataTable
         Try
             Dim dal As New DAL.DALTAI
-            Return dal.BuscaPessoa(flag_pessoa)
+            Return dal.BuscaPessoa(id_escola, flag_pessoa)
         Catch ex As Exception
 
         End Try

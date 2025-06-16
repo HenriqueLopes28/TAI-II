@@ -14,7 +14,7 @@ Public Class DALTAI
             Dim oBanco As New oBanco.CBanco
             Dim dt As DataTable
 
-            s.AppendLine("SELECT id_pessoa,id_escola,flag_pessoa,status_avaliacao_escola,status_avaliacao_professor,nome FROM tbl_cadastro WHERE id_pessoa = @id_pessoa")
+            s.AppendLine("SELECT id_pessoa,id_escola,flag_pessoa,nome FROM tbl_cadastro WHERE id_pessoa = @id_pessoa")
             oBanco.pCommand.Parameters.AddWithValue("@id_pessoa", login)
             dt = oBanco.mDataTableCriar(s.ToString)
             Return dt
@@ -99,7 +99,7 @@ Public Class DALTAI
 
     End Function
 
-    Public Function BuscaRespostas(id_professor As Integer) As DataTable
+    Public Function BuscaRespostas(id_professor As Integer, id_escola As Integer) As DataTable
 
         Dim s As New Text.StringBuilder
         Dim oBanco As New oBanco.CBanco
@@ -113,24 +113,26 @@ Public Class DALTAI
         s.AppendLine("Else case when resposta=4 then 'Ruim'")
         s.AppendLine("Else 'Muito Ruim'")
         s.AppendLine("End end end end dcresposta")
-        s.AppendLine("FROM tbl_resposta WHERE id_professor = @id_professor")
+        s.AppendLine("FROM tbl_resposta WHERE id_professor = @id_professor AND id_escola = @id_escola")
         s.AppendLine("Group by resposta) dadosCompleto,")
         s.AppendLine("(SELECT COUNT(*) AS total")
         s.AppendLine("FROM tbl_resposta WHERE id_professor = @id_professor) total;")
         oBanco.pCommand.Parameters.AddWithValue("@id_professor", id_professor)
+        oBanco.pCommand.Parameters.AddWithValue("@id_escola", id_escola)
         dt = oBanco.mDataTableCriar(s.ToString)
 
         Return dt
     End Function
 
-    Public Function BuscaPessoa(flag_pessoa As Integer) As DataTable
+    Public Function BuscaPessoa(id_escola As Integer, flag_pessoa As Integer) As DataTable
 
         Dim s As New Text.StringBuilder
         Dim oBanco As New oBanco.CBanco
         Dim dt As New DataTable
 
-        s.AppendLine("SELECT nome, id_pessoa FROM tbl_cadastro WHERE flag_pessoa = @flag_pessoa")
+        s.AppendLine("SELECT nome, id_pessoa FROM tbl_cadastro WHERE flag_pessoa = @flag_pessoa AND id_escola = @id_escola")
         oBanco.pCommand.Parameters.AddWithValue("@flag_pessoa", flag_pessoa)
+        oBanco.pCommand.Parameters.AddWithValue("@id_escola", id_escola)
         dt = oBanco.mDataTableCriar(s.ToString)
 
         Return dt
@@ -180,8 +182,12 @@ Public Class DALTAI
             Dim oBanco As New oBanco.CBanco
 
             For i As Integer = 0 To dt.Rows.Count - 1
-                s.AppendLine("INSERT INTO tbl_resposta (id_pergunta, id_pessoa, resposta, id_professor) VALUES (" + dt.Rows(i)("id_pergunta").ToString + ",")
-                s.AppendLine(dt.Rows(i)("id_pessoa").ToString + ", " + dt.Rows(i)("resposta").ToString + ", " + dt.Rows(i)("id_professor").ToString + ");")
+                s.AppendLine("INSERT INTO db_trabalho.tbl_resposta (id_pergunta, id_pessoa, resposta, id_professor, id_escola) VALUES (" _
+                & dt.Rows(i)("id_pergunta").ToString & ", " _
+                & dt.Rows(i)("id_pessoa").ToString & ", '" _
+                & dt.Rows(i)("resposta").ToString.Replace("'", "''") & "', " _
+                & dt.Rows(i)("id_professor").ToString & ", " _
+                & dt.Rows(i)("id_escola").ToString & ");")
             Next
 
             oBanco.mIncluir(s.ToString)

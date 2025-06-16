@@ -145,6 +145,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="img\caio.png" />
+    <Content Include="img\flavio.png" />
+    <Content Include="img\henrique.png" />
+    <Content Include="img\lipe.png" />
+    <Content Include="img\logoteste.png" />
     <Content Include="index.aspx" />
     <Content Include="inicio.aspx" />
     <Content Include="principal.aspx" />
@@ -176,7 +181,6 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="web\ChartJs\Chart.min.js" />
     <Content Include="web\ChartJs\chartjs-demo.js" />
     <Content Include="web\jsLocal.js" />
     <Content Include="web\notify\pnotify.buttons.js" />

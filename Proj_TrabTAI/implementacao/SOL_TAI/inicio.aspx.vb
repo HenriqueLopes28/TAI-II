@@ -57,8 +57,6 @@
                 ObjBE.Id_escola = dt.Rows(0)("id_escola")
                 ObjBE.Id_pessoa = dt.Rows(0)("id_pessoa")
                 ObjBE.Flag_pessoa = dt.Rows(0)("flag_pessoa")
-                ObjBE.Status_avaliacao_professor = dt.Rows(0)("status_avaliacao_professor")
-                ObjBE.Status_avaliacao_escola = dt.Rows(0)("status_avaliacao_escola")
                 ObjBE.Nome = dt.Rows(0)("nome")
 
                 Session("Login") = ObjBE

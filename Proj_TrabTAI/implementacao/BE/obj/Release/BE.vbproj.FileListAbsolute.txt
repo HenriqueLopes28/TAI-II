@@ -1,0 +1,10 @@
+D:\Projetos\Proj_TrabTAI\implementacao\BE\bin\Release\BE.dll
+D:\Projetos\Proj_TrabTAI\implementacao\BE\bin\Release\BE.pdb
+D:\Projetos\Proj_TrabTAI\implementacao\BE\bin\Release\BE.xml
+D:\Projetos\Proj_TrabTAI\implementacao\BE\obj\Release\BE.vbproj.AssemblyReference.cache
+D:\Projetos\Proj_TrabTAI\implementacao\BE\obj\Release\BE.Resources.resources
+D:\Projetos\Proj_TrabTAI\implementacao\BE\obj\Release\BE.vbproj.GenerateResource.cache
+D:\Projetos\Proj_TrabTAI\implementacao\BE\obj\Release\BE.vbproj.CoreCompileInputs.cache
+D:\Projetos\Proj_TrabTAI\implementacao\BE\obj\Release\BE.dll
+D:\Projetos\Proj_TrabTAI\implementacao\BE\obj\Release\BE.xml
+D:\Projetos\Proj_TrabTAI\implementacao\BE\obj\Release\BE.pdb

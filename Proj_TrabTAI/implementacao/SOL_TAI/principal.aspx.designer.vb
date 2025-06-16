@@ -32,6 +32,15 @@ Partial Public Class principal
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
+    '''Controle LblUsuario.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents LblUsuario As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Controle BtnEscola.
     '''</summary>
     '''<remarks>

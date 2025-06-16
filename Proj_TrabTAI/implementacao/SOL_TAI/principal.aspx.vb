@@ -13,23 +13,22 @@ Public Class principal
                 objBE = CType(Session("Login"), BE.BECadastro)
 
 
-
-
                 If objBE.Flag_pessoa = 0 Then
+
                     PnlAlunoProfessor.Visible = True
-                    ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('titulo').innerText = 'InsightFlow - Aluno" & "';", True)
+                    LblUsuario.Text = "Aluno"
 
 
                 ElseIf objBE.Flag_pessoa = 1 Then
 
                     PnlAlunoProfessor.Visible = True
                     BtnProfessor.Visible = False
-                    ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('titulo').innerText = 'InsightFlow - Professor" & "';", True)
+                    LblUsuario.Text = "Professor"
 
                 Else
                     BtnEscola.Text = "Respostas sobre Escola"
                     BtnProfessor.Text = "Respostas sobre Professor"
-                    ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('titulo').innerText = 'InsightFlow - Coordenador" & "';", True)
+                    LblUsuario.Text = "Coordenador"
 
 
                 End If
@@ -81,7 +80,7 @@ Public Class principal
 
         Else
 
-            Dim dt2 As DataTable = ObjBLL.BuscaPessoa(1)
+            Dim dt2 As DataTable = ObjBLL.BuscaPessoa(objBE.Id_escola, 1)
             GridNomesProfessor.DataSource = dt2
             GridNomesProfessor.DataBind()
             GridNomesProfessor.Visible = True
@@ -99,9 +98,11 @@ Public Class principal
 
         objBE = CType(Session("Login"), BE.BECadastro)
         DivTexto.Visible = False
+        PnlPerguntasProfessor.Visible = False
 
         If objBE.Flag_pessoa = 0 Or objBE.Flag_pessoa = 1 Then
             Dim EscolaAvaliada As Boolean = ObjBLL.VerificaAvaliacao(objBE.Id_pessoa, 0)
+
             If EscolaAvaliada = False Then
 
                 PnlPerguntasProfessor.Visible = False
@@ -122,13 +123,15 @@ Public Class principal
                 End If
 
             Else
-                'erro, escola ja avaliada
+                DivTexto.Visible = True
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "congratz", "mensagem('<b>" & "ERRO" & "</b>','error','<b>" & "A escola já foi avaliada" & "</b>'," & 2000 & ",'350px','fa fa-solid fa-exclamation-circle');", True)
+
             End If
 
 
         Else
 
-            Dim dt2 As DataTable = ObjBLL.BuscaEscola(1)
+            Dim dt2 As DataTable = ObjBLL.BuscaEscola(objBE.Id_escola)
             GridNomeEscola.DataSource = dt2
             GridNomeEscola.DataBind()
             GridNomeEscola.Visible = True
@@ -151,7 +154,7 @@ Public Class principal
 
             Dim ProfessorAvaliado As Boolean = objBLL.VerificaAvaliacao(objBE.Id_pessoa, DpProfessorSelecionado.SelectedValue)
             If ProfessorAvaliado = True Then
-                'erro, professor ja avaliado
+
                 GridPerguntaProfessor.Visible = False
             Else
                 GridPerguntaProfessor.Visible = True
@@ -174,11 +177,13 @@ Public Class principal
         Dim dc2 As New Data.DataColumn("id_pessoa")
         Dim dc3 As New Data.DataColumn("resposta")
         Dim dc4 As New Data.DataColumn("id_professor")
+        Dim dc5 As New Data.DataColumn("id_escola")
 
         dt.Columns.Add(dc1)
         dt.Columns.Add(dc2)
         dt.Columns.Add(dc3)
         dt.Columns.Add(dc4)
+        dt.Columns.Add(dc5)
 
         For Each row As GridViewRow In GridPerguntaProfessor.Rows
 
@@ -205,6 +210,7 @@ Public Class principal
             dr("id_pergunta") = GridPerguntaProfessor.DataKeys(row.RowIndex).Item("id_pergunta")
             dr("id_pessoa") = ObjBE.Id_pessoa
             dr("id_professor") = DpProfessorSelecionado.SelectedValue
+            dr("id_escola") = ObjBE.Id_escola
             dt.Rows.Add(dr)
 
         Next
@@ -262,11 +268,13 @@ Public Class principal
         Dim dc2 As New Data.DataColumn("id_pessoa")
         Dim dc3 As New Data.DataColumn("resposta")
         Dim dc4 As New Data.DataColumn("id_professor")
+        Dim dc5 As New Data.DataColumn("id_escola")
 
         dt.Columns.Add(dc1)
         dt.Columns.Add(dc2)
         dt.Columns.Add(dc3)
         dt.Columns.Add(dc4)
+        dt.Columns.Add(dc5)
 
         For Each row As GridViewRow In GridPerguntasEscola.Rows
 
@@ -293,6 +301,7 @@ Public Class principal
             dr("id_pergunta") = GridPerguntasEscola.DataKeys(row.RowIndex).Item("id_pergunta")
             dr("id_pessoa") = ObjBE.Id_pessoa
             dr("id_professor") = "0"
+            dr("id_escola") = ObjBE.Id_escola
             dt.Rows.Add(dr)
 
         Next
@@ -373,8 +382,12 @@ Public Class principal
         Dim objBLL As New BLL.BLLTAI
         Dim s As New Text.StringBuilder
         Dim dt As DataTable
+        Dim ObjBE As New BE.BECadastro
+        ObjBE = CType(Session("Login"), BE.BECadastro)
+        Dim id_escola = ObjBE.Id_escola
 
-        dt = objBLL.BuscaRespostas(id_professor)
+
+        dt = objBLL.BuscaRespostas(id_professor, id_escola)
         GridExibirDados.DataSource = dt
         GridExibirDados.DataBind()
 
