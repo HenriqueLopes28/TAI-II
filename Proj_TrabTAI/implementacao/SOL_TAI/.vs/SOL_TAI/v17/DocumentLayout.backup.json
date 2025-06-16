@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\inicio.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|solutionrelative:inicio.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{069F8408-7FDD-4D58-9DD8-AF745FF2E693}|..\\oBanco\\oBanco.vbproj|d:\\projetos\\proj_trabtai\\implementacao\\obanco\\cbanco.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\principal.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|solutionrelative:principal.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\inicio.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|solutionrelative:inicio.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|SOL_TAI.vbproj|D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -35,7 +35,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -51,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "inicio.aspx.vb",
               "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\inicio.aspx.vb",
               "RelativeDocumentMoniker": "inicio.aspx.vb",
@@ -89,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "principal.aspx.vb",
               "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\SOL_TAI\\principal.aspx.vb",
               "RelativeDocumentMoniker": "principal.aspx.vb",
@@ -115,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CBanco.vb",
               "DocumentMoniker": "D:\\Projetos\\Proj_TrabTAI\\implementacao\\oBanco\\CBanco.vb",
               "RelativeDocumentMoniker": "..\\oBanco\\CBanco.vb",
