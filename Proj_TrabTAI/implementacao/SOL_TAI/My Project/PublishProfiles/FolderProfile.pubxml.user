@@ -3,7 +3,7 @@
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\Projetos\Proj_TrabTAI\publicacao</_PublishTargetUrl>
-    <History>True|2025-06-16T16:07:47.4137297Z||;True|2025-06-16T12:28:00.0262280-03:00||;True|2025-06-16T12:04:46.4041429-03:00||;True|2025-06-16T11:01:54.9054050-03:00||;True|2025-06-12T14:34:40.3433764-03:00||;True|2025-06-12T12:29:08.9861003-03:00||;False|2025-06-12T12:28:19.8579170-03:00||;</History>
+    <History>True|2025-06-23T18:01:33.5448182Z||;True|2025-06-23T14:49:50.5241144-03:00||;True|2025-06-16T13:07:47.4137297-03:00||;True|2025-06-16T12:28:00.0262280-03:00||;True|2025-06-16T12:04:46.4041429-03:00||;True|2025-06-16T11:01:54.9054050-03:00||;True|2025-06-12T14:34:40.3433764-03:00||;True|2025-06-12T12:29:08.9861003-03:00||;False|2025-06-12T12:28:19.8579170-03:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -23,25 +23,25 @@
       <publishTime>06/12/2025 12:28:18</publishTime>
     </File>
     <File Include="bin/BLL.dll">
-      <publishTime>06/16/2025 13:07:46</publishTime>
+      <publishTime>06/23/2025 15:01:32</publishTime>
     </File>
     <File Include="bin/BLL.dll.config">
       <publishTime>04/19/2025 16:09:34</publishTime>
     </File>
     <File Include="bin/BLL.pdb">
-      <publishTime>06/16/2025 13:07:46</publishTime>
+      <publishTime>06/23/2025 15:01:32</publishTime>
     </File>
     <File Include="bin/BouncyCastle.Cryptography.dll">
       <publishTime>04/21/2023 09:07:22</publishTime>
     </File>
     <File Include="bin/DAL.dll">
-      <publishTime>06/16/2025 13:07:46</publishTime>
+      <publishTime>06/23/2025 15:01:32</publishTime>
     </File>
     <File Include="bin/DAL.dll.config">
       <publishTime>04/19/2025 16:09:34</publishTime>
     </File>
     <File Include="bin/DAL.pdb">
-      <publishTime>06/16/2025 13:07:46</publishTime>
+      <publishTime>06/23/2025 15:01:32</publishTime>
     </File>
     <File Include="bin/Google.Protobuf.dll">
       <publishTime>10/26/2022 10:46:16</publishTime>
@@ -83,13 +83,13 @@
       <publishTime>03/08/2023 07:09:56</publishTime>
     </File>
     <File Include="bin/oBanco.dll">
-      <publishTime>06/16/2025 13:07:46</publishTime>
+      <publishTime>06/23/2025 15:01:32</publishTime>
     </File>
     <File Include="bin/oBanco.dll.config">
       <publishTime>03/14/2025 14:00:54</publishTime>
     </File>
     <File Include="bin/oBanco.pdb">
-      <publishTime>06/16/2025 13:07:46</publishTime>
+      <publishTime>06/23/2025 15:01:32</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.AspNet.FriendlyUrls.resources.dll">
       <publishTime>07/30/2013 14:01:52</publishTime>
@@ -245,10 +245,10 @@
       <publishTime>08/08/2018 12:18:16</publishTime>
     </File>
     <File Include="bin/SOL_TAI.dll">
-      <publishTime>06/16/2025 13:07:46</publishTime>
+      <publishTime>06/23/2025 15:01:33</publishTime>
     </File>
     <File Include="bin/SOL_TAI.pdb">
-      <publishTime>06/16/2025 13:07:46</publishTime>
+      <publishTime>06/23/2025 15:01:33</publishTime>
     </File>
     <File Include="bin/System.Buffers.dll">
       <publishTime>02/19/2020 07:05:18</publishTime>
@@ -272,7 +272,7 @@
       <publishTime>02/11/2014 16:26:04</publishTime>
     </File>
     <File Include="bin/WebForms_Basic.xml">
-      <publishTime>06/16/2025 13:07:46</publishTime>
+      <publishTime>06/23/2025 15:01:33</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 14:57:34</publishTime>
@@ -413,7 +413,7 @@
       <publishTime>06/13/2025 14:22:18</publishTime>
     </File>
     <File Include="principal.aspx">
-      <publishTime>06/12/2025 12:17:13</publishTime>
+      <publishTime>06/23/2025 14:47:22</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>04/19/2025 15:44:46</publishTime>

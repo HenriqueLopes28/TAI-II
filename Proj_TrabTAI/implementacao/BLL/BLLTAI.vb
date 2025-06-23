@@ -66,6 +66,15 @@ Public Class BLLTAI
 
         End Try
     End Function
+
+    Public Function RespostasTabela(id_escola As Integer, id_professor As Integer) As DataTable
+        Try
+            Dim dal As New DAL.DALTAI
+            Return dal.RespostasTabela(id_escola, id_professor)
+        Catch ex As Exception
+
+        End Try
+    End Function
 #End Region
 
 #Region "INSERT"

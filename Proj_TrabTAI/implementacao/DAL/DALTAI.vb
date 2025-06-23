@@ -150,6 +150,31 @@ Public Class DALTAI
 
         Return dt
     End Function
+
+    Public Function RespostasTabela(id_escola As Integer, id_professor As Integer) As DataTable
+        Dim s As New Text.StringBuilder
+        Dim oBanco As New oBanco.CBanco
+        Dim dt As New DataTable
+
+        s.AppendLine("SELECT p.id_pergunta, p.pergunta,")
+        s.AppendLine("SUM(CASE WHEN resp.resposta=1 THEN 1 ELSE 0 END) as voto_muitoBom,")
+        s.AppendLine("SUM(CASE WHEN resp.resposta=2 THEN 1 ELSE 0 END) as voto_bom,")
+        s.AppendLine("SUM(CASE WHEN resp.resposta=3 THEN 1 ELSE 0 END) as voto_regular,")
+        s.AppendLine("SUM(CASE WHEN resp.resposta=4 THEN 1 ELSE 0 END) as voto_ruim,")
+        s.AppendLine("SUM(CASE WHEN resp.resposta=5 THEN 1 ELSE 0 END) as voto_muitoRuim")
+        s.AppendLine("FROM db_trabalho.tbl_pergunta p")
+        s.AppendLine("INNER JOIN db_trabalho.tbl_resposta resp ON resp.id_pergunta=p.id_pergunta")
+        s.AppendLine("WHERE resp.id_escola=@id_escola and resp.id_professor = @id_professor")
+        s.AppendLine("GROUP BY p.id_pergunta, p.pergunta;")
+
+        oBanco.pCommand.Parameters.AddWithValue("@id_escola", id_escola)
+        oBanco.pCommand.Parameters.AddWithValue("@id_professor", id_professor)
+        dt = oBanco.mDataTableCriar(s.ToString)
+
+        Return dt
+
+
+    End Function
 #End Region
 
 #Region "INSERT"

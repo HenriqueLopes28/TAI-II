@@ -246,4 +246,22 @@ Partial Public Class principal
     '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
     '''</remarks>
     Protected WithEvents GridExibirDados As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''Controle UpdatePanel3.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents UpdatePanel3 As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
+    '''Controle GridTabelaRespostas.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents GridTabelaRespostas As Global.System.Web.UI.WebControls.GridView
 End Class

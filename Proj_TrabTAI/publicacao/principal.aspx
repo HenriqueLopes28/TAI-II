@@ -26,7 +26,8 @@
                 <div class="container-fluid">
                     <div class="d-flex align-items-center">
                         <img class="me-2" width="70" height="55" src="img/logoteste.png" />
-                        <h1 class="fs-1 fw-bold text-light" id="titulo">InsightFlow - <asp:label ID="LblUsuario" runat="server"></asp:label></h1>
+                        <h1 class="fs-1 fw-bold text-light" id="titulo">InsightFlow -
+                            <asp:Label ID="LblUsuario" runat="server"></asp:Label></h1>
                     </div>
                 </div>
                 <div class="d-flex">
@@ -259,7 +260,8 @@
                                                 <asp:BoundField DataField="nome" ItemStyle-HorizontalAlign="left" />
                                                 <asp:TemplateField ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:Button ID="BtnExibirProfessor" CommandName="exibir" CommandArgument="<%# Container.DataItemIndex %>" runat="server" CssClass="btn btn-secondary fw-bold me-3 px-3 py-2" Text="Exibir" />
+                                                        <asp:Button ID="BtnExibirProfessor" CommandName="exibir" CommandArgument="<%# Container.DataItemIndex %>" runat="server" CssClass="btn btn-secondary fw-bold me-3 px-3 py-2" Text="Exibir Grafico" />
+                                                        <asp:Button ID="BtnExibirTabelaProfessor" CommandName="exibirTabelaProfessor" CommandArgument="<%# Container.DataItemIndex %>" runat="server" CssClass="btn btn-secondary fw-bold me-3 px-3 py-2" Text="Exibir Tabela" />
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                             </Columns>
@@ -297,7 +299,12 @@
                                                 <asp:BoundField DataField="nome" ItemStyle-HorizontalAlign="left" />
                                                 <asp:TemplateField ItemStyle-HorizontalAlign="Center">
                                                     <ItemTemplate>
-                                                        <asp:Button ID="BtnExibirEscola" CommandName="exibir" CommandArgument="<%# Container.DataItemIndex %>" runat="server" CssClass="btn btn-secondary fw-bold me-3 px-3 py-2" Text="Exibir" />
+                                                        <asp:Button ID="BtnExibirEscola" CommandName="exibir" CommandArgument="<%# Container.DataItemIndex %>" runat="server" CssClass="btn btn-secondary fw-bold me-3 px-3 py-2" Text="Exibir Grafico" />
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField ItemStyle-HorizontalAlign="Center">
+                                                    <ItemTemplate>
+                                                        <asp:Button ID="BtnExibirTabelaEscola" CommandName="exibirTabelaEscola" CommandArgument="<%# Container.DataItemIndex %>" runat="server" CssClass="btn btn-secondary fw-bold me-3 px-3 py-2" Text="Exibir Tabela" />
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                             </Columns>
@@ -312,8 +319,9 @@
             </div>
         </asp:Panel>
 
+        <!-- Modal Grafico -->
         <div class="modal fade" id="modalResultados" tabindex="-1" aria-labelledby="modalResultadosLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered custom-modal-size">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
                 <div class="modal-content shadow-lg">
                     <div class="modal-header">
                         <h5 class="modal-title" id="TituloModal">Resultado do Professor: </h5>
@@ -340,7 +348,43 @@
                             </ContentTemplate>
                         </asp:UpdatePanel>
 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Modal Tabela -->
+
+        <div class="modal fade" id="modalTabela" tabindex="-1" aria-labelledby="modalResultadosLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content shadow-lg">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalTabela">Resultado do Professor: </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- Grid Tabela -->
+                        <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                            <ContentTemplate>
+                                <p class="card-text pt-3">
+                                    <asp:GridView ID="GridTabelaRespostas" HorizontalAlign="Center" CssClass="table table-hover f-12" GridLines="None" AutoGenerateColumns="False"
+                                        DataKeyNames="id_pergunta" runat="server">
+                                        <Columns>
+                                            <asp:BoundField DataField="pergunta" HeaderText="Pergunta" ItemStyle-HorizontalAlign="left" />
+                                            <asp:BoundField DataField="voto_muitoBom" HeaderText="Muito bom" ItemStyle-HorizontalAlign="left" />
+                                            <asp:BoundField DataField="voto_bom" HeaderText="Bom" ItemStyle-HorizontalAlign="left" />
+                                            <asp:BoundField DataField="voto_regular" HeaderText="Regular" ItemStyle-HorizontalAlign="left" />
+                                            <asp:BoundField DataField="voto_ruim" HeaderText="Ruim" ItemStyle-HorizontalAlign="left" />
+                                            <asp:BoundField DataField="voto_muitoRuim" HeaderText="Muito Ruim" ItemStyle-HorizontalAlign="left" />
+                                        </Columns>
+                                    </asp:GridView>
+                                </p>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
 
                     </div>
                     <div class="modal-footer">
@@ -349,6 +393,7 @@
                 </div>
             </div>
         </div>
+
 
         <script src="scripts/bootstrap.js"></script>
         <script src="scripts/jquery-3.7.0.min.js"></script>

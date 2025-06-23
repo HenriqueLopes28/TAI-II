@@ -424,6 +424,24 @@ Campo gerado automaticamente.
 Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
 </remarks>
 </member>
+<member name="F:SOL_TAI.principal._UpdatePanel3">
+<summary>
+Controle UpdatePanel3.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
+<member name="F:SOL_TAI.principal._GridTabelaRespostas">
+<summary>
+Controle GridTabelaRespostas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+</remarks>
+</member>
 <member name="F:SOL_TAI.SiteMaster._MainContent">
 <summary>
 Controle MainContent.

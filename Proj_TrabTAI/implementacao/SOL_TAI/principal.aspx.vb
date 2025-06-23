@@ -136,7 +136,6 @@ Public Class principal
             GridNomeEscola.DataBind()
             GridNomeEscola.Visible = True
 
-
             PnlRespostasProfessor.Visible = False
             PnlRespostasEscola.Visible = True
         End If
@@ -354,8 +353,15 @@ Public Class principal
         Dim id_professor As Integer = GridNomesProfessor.DataKeys(index).Value
 
         If e.CommandName = "exibir" Then
+            nomeProfessor = HttpUtility.HtmlDecode(nomeProfessor)
             ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('TituloModal').innerText = 'Resultado do Professor: " & nomeProfessor.Replace("'", "\'") & "';", True)
             GeraGrafico(id_professor, "Nao existe resposta sobre esse professor(a)!")
+        End If
+
+        If e.CommandName = "exibirTabelaProfessor" Then
+            nomeProfessor = HttpUtility.HtmlDecode(nomeProfessor)
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('TituloModalTabela').innerText = 'Resultado do Professor: " & nomeProfessor.Replace("'", "\'") & "';", True)
+            GeraTabela(id_professor, "Nao existe resposta sobre esse professor(a)!")
         End If
 
     End Sub
@@ -366,16 +372,48 @@ Public Class principal
         Dim id_escola As Integer = GridNomeEscola.DataKeys(index).Value
 
         If e.CommandName = "exibir" Then
+            nomeEscola = HttpUtility.HtmlDecode(nomeEscola)
             ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('TituloModal').innerText = 'Resultado da Escola: " & nomeEscola.Replace("'", "\'") & "';", True)
             GeraGrafico(0, "Nao existe resposta sobre a escola!")
         End If
 
-
+        If e.CommandName = "exibirTabelaEscola" Then
+            nomeEscola = HttpUtility.HtmlDecode(nomeEscola)
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "atualizaTitulo", "document.getElementById('TituloModalTabela').innerText = 'Resultado da Escola: " & nomeEscola.Replace("'", "\'") & "';", True)
+            GeraTabela(0, "Nao existe resposta sobre a escola!")
+        End If
 
 
     End Sub
 
+    Private Sub GeraTabela(id_professor As Integer, frase As String)
 
+        Dim objBLL As New BLL.BLLTAI
+        Dim s As New Text.StringBuilder
+        Dim dt As DataTable
+        Dim ObjBE As New BE.BECadastro
+        ObjBE = CType(Session("Login"), BE.BECadastro)
+        Dim id_escola = ObjBE.Id_escola
+
+        dt = objBLL.RespostasTabela(id_escola, id_professor)
+        GridTabelaRespostas.DataSource = dt
+        GridTabelaRespostas.DataBind()
+
+        If dt.Rows.Count > 0 Then
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "abrirModal", "$('#modalTabela').modal('show');", True)
+
+        Else
+            Dim titulo As String
+            Dim tempo As Integer
+
+            titulo = "ERRO"
+
+            tempo = 2000
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "congratz", "mensagem('<b>" & titulo & "</b>','error','<b>" & frase & "</b>'," & tempo & ",'350px','fa fa-solid fa-exclamation-circle');", True)
+
+        End If
+
+    End Sub
 
     Private Sub GeraGrafico(id_professor As Integer, frase As String)
 
@@ -390,6 +428,8 @@ Public Class principal
         dt = objBLL.BuscaRespostas(id_professor, id_escola)
         GridExibirDados.DataSource = dt
         GridExibirDados.DataBind()
+
+
 
         If dt.Rows.Count > 0 Then
 

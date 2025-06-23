@@ -19,7 +19,7 @@ Public Class CBanco
     'Public Const SERVIDOR As String = "mysql16.kinghost.net"
     Private Const DBNAME As String = "db_trabalho"
     Private Const USER As String = "root" ' "eArp" '  
-    Private Const PASSWORD As String = "Lipe230904."
+    Private Const PASSWORD As String = "##############"
 
     Private strStringConexao_m As String = "server=" & SERVIDOR &
                                             "; user id=" & USER &
